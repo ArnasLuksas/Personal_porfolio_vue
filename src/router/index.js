@@ -16,6 +16,51 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+  {
+    path: "/contacts",
+    name: "Contacts",
+    component: () =>
+      import(/* webpackChunkName: "contacts" */ "../views/Contacts.vue"),
+  },
+
+  {
+    path: "/projects",
+    name: "Projects",
+    component: () =>
+      import(/* webpackChunkName: "projects" */ "../views/Projects.vue"),
+  },
+  {
+    path: "/skills",
+    name: "Skills",
+    component: () =>
+      import(/* webpackChunkName: "skills" */ "../views/Skills.vue"),
+  },
+  {
+    path: '/portfolio',
+    name: "Portfolio",
+    beforeEnter() {
+      window.open("https://www.arnasluksas.lt",
+        '_blank');
+    },
+  },
+  {
+    path: '/linkedin',
+    name: "Linkedin",
+    beforeEnter() {
+      window.open("https://www.linkedin.com/in/arnasluksas/",
+        '_blank');
+    },
+  },
+  {
+    path: '/github',
+    name: "Github",
+    beforeEnter() {
+      window.open("https://github.com/ArnasLuksas",
+        '_blank');
+    },
+  }
+
+
 ];
 
 const router = createRouter({
