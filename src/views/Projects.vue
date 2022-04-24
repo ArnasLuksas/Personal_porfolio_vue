@@ -12,11 +12,14 @@ export default {
   },
   data() {
     return {
-      projects: sourceData.projects,
+      projects: sourceData.projects,     
     };
+
   },
 };
+
+
 </script>
 
 <style>
-</style>
+</style>›

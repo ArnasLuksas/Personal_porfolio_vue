@@ -1,8 +1,7 @@
 <template>
   <footer v-for="item in developer" :key="item.name">
-   	&copy; {{ currentYear }}
-    <router-link :to="{ name: 'Portfolio' }">  
-
+    &copy; {{ currentYear }}
+    <router-link :to="{ name: 'Home' }">
       {{ item.name }} {{ item.surname }}</router-link
     >
   </footer>
@@ -16,7 +15,7 @@ export default {
   data() {
     return {
       developer: sourceData.developer,
-      currentYear: new Date().getFullYear()
+      currentYear: new Date().getFullYear(),
     };
   },
 };

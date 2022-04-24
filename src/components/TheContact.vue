@@ -6,19 +6,10 @@
         <img :src="contact.image" :alt="contact.name" />
         <span>{{ contact.contact }}</span>
       </div>
-      <div
-        class="social linkedin"
-        v-for="item in social[0].linkedin"
-        :key="item"
-      >
-        <router-link :to="{ name: 'Linkedin' }">
+      <div class="social" v-for="item in social" :key="item">
+        <AppLink :to="item.contact">
           <img :src="item.image" :alt="item.name" />
-        </router-link>
-      </div>
-      <div class="social github" v-for="item in social[0].github" :key="item">
-        <router-link :to="{ name: 'Github' }">
-          <img :src="item.image" :alt="item.name" />
-        </router-link>
+        </AppLink>
       </div>
     </div>
   </section>

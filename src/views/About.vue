@@ -3,8 +3,8 @@
     <h2>Who I am?</h2>
     <p>
       {{ item.description }}
-      <router-link :to="{ name: 'Contacts' }">Contact me </router-link>
-      if you have any questions.
+      <router-link :to="{ name: 'Contacts' }">Contacts </router-link>
+     
     </p>
   </section>
 </template>
