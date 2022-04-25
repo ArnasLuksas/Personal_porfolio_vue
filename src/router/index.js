@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import TheProject from "../components/TheProject.vue";
 
 const routes = [
   {
@@ -42,11 +41,15 @@ const routes = [
     },
   },
   {
-    path: '/projects/:id',
+    path: "/project/:id",
     name: "Project",
-    props: true,
-    component: TheProject
+    props: route =>({id: parseInt(route.params.id)}), //change from string to integer
+    component: () =>
+      import(/* webpackChunkName: "project" */ "../components/TheProject.vue"),
   },
+
+    
+
 
 
 
